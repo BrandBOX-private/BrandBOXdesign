@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar cotización — BrandBOX Design</title>
+<meta name="description" content="Cuéntanos tu proyecto de empaque o marca y te respondemos en un día hábil.">
+<meta name="theme-color" content="#f3f5f7">
+<link rel="canonical" href="https://brandbox-private.github.io/BrandBOXdesign/cotizar.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23fff'/%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%23171b20' stroke-width='1.6'/%3E%3Crect x='8' y='8' width='16' height='16' rx='4' fill='none' stroke='%23171b20' stroke-width='1.6'/%3E%3Cpath d='M12 18 25 25' stroke='%23171b20' stroke-width='1.8'/%3E%3C/svg%3E">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3D4PJ3D0HY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3D4PJ3D0HY');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+<style>
+  @font-face { font-family: "Metropolis"; font-weight: 200; font-style: normal; font-display: swap; src: url("fonts/Metropolis-ExtraLight.otf") format("opentype"); }
+  @font-face { font-family: "Metropolis"; font-weight: 800; font-style: normal; font-display: swap; src: url("fonts/Metropolis-ExtraBold.otf") format("opentype"); }
+  :root {
+    --hielo: #f3f5f7; --blanco: #ffffff; --linea: #d3d9df; --grafito: #14181d; --tinta: #1c2228; --suave: #5d6772; --acento: #55606b;
+    --sans: "Roboto", "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif;
+    --display: "Metropolis", "Montserrat", "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--hielo); color: var(--tinta); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--acento); outline-offset: 3px; }
+  .wrap { width: min(640px, 100% - 40px); margin-inline: auto; }
+  header { border-bottom: 1px solid var(--linea); background: rgba(243,245,247,.95); }
+  header .barra { width: min(1160px, 100% - 40px); margin-inline: auto; display: flex; align-items: center; justify-content: space-between; min-height: 68px; gap: 16px; }
+  .marca { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; }
+  .marca img { width: 36px; height: 36px; }
+  .marca .nombre { display: flex; flex-direction: column; font-family: var(--display); font-weight: 200; line-height: 1; }
+  .marca .nombre b { font-weight: 800; }
+  .marca .nombre small { font-size: 8.5px; letter-spacing: .62em; font-weight: 700; margin-top: 6px; color: var(--suave); }
+  .volver { font-size: 12px; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; color: var(--suave); font-weight: 500; }
+  .volver:hover { color: var(--grafito); }
+  main { padding: 56px 0 80px; }
+  h1 { font-family: var(--display); font-weight: 200; font-size: clamp(30px, 5vw, 44px); text-transform: uppercase; letter-spacing: .03em; line-height: 1.08; margin: 0 0 14px; }
+  h1 b { font-weight: 800; }
+  .intro { color: var(--suave); margin: 0 0 34px; }
+  form { display: grid; gap: 22px; }
+  .campo { display: flex; flex-direction: column; gap: 8px; }
+  label { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--acento); }
+  label small { text-transform: none; letter-spacing: 0; font-weight: 400; color: var(--suave); font-size: 13px; }
+  input, select, textarea { width: 100%; font: inherit; font-size: 16px; color: var(--tinta); background: var(--blanco); border: 1px solid var(--linea); padding: 13px 14px; border-radius: 0; }
+  textarea { min-height: 150px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { outline: 2px solid var(--acento); outline-offset: 1px; border-color: transparent; }
+  .honey { position: absolute; left: -9999px; height: 0; overflow: hidden; }
+  .btn { justify-self: start; padding: 16px 34px; border: 1px solid var(--grafito); background: var(--grafito); color: #fff; font: inherit; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; cursor: pointer; clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px)); }
+  .btn:hover { background: #2d3740; }
+  .btn[disabled] { opacity: .6; cursor: wait; }
+  .nota { font-size: 14px; color: var(--suave); margin: 0; }
+  .estado { display: none; margin: 0; padding: 16px 18px; border: 1px solid var(--linea); background: var(--blanco); }
+  .estado.ok, .estado.err { display: block; }
+  .otros { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--linea); font-size: 15px; color: var(--suave); }
+  .otros a { color: var(--grafito); }
+  @media (max-width: 560px) { main { padding-top: 36px; } .btn { width: 100%; justify-self: stretch; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="barra">
+    <a class="marca" href="index.html" aria-label="BrandBOX Design, inicio">
+      <img src="img/logo-icono.png" width="584" height="584" alt="">
+      <span class="nombre"><span>BRAND<b>BOX</b></span><small>DESIGN</small></span>
+    </a>
+    <a class="volver" href="index.html">← Volver</a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Cuéntanos <b>tu proyecto</b></h1>
+    <p class="intro">Cada proyecto se diseña y se cotiza a la medida. Con lo que nos cuentes aquí te respondemos en un día hábil.</p>
+
+    <form id="form-cotizar" action="https://formsubmit.co/thebrandboxdesign@gmail.com" method="post" novalidate>
+      <input type="hidden" name="_subject" value="Nueva solicitud de cotización · BrandBOX">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <div class="honey" aria-hidden="true"><label>No llenar<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="campo"><label for="f-nombre">Nombre</label><input type="text" id="f-nombre" name="Nombre" required autocomplete="name"></div>
+      <div class="campo"><label for="f-email">Correo</label><input type="email" id="f-email" name="email" required autocomplete="email"></div>
+      <div class="campo"><label for="f-tel">WhatsApp <small>(opcional)</small></label><input type="tel" id="f-tel" name="WhatsApp" autocomplete="tel"></div>
+      <div class="campo"><label for="f-marca">Tu marca y qué producto empacar</label><input type="text" id="f-marca" name="Marca y producto" autocomplete="organization"></div>
+      <div class="campo"><label for="f-cant">Cantidad aproximada <small>(el mínimo es de 50 piezas)</small></label>
+        <select id="f-cant" name="Cantidad aproximada">
+          <option value="">Aún no lo sé</option>
+          <option>50 a 100 piezas</option>
+          <option>100 a 250 piezas</option>
+          <option>Más de 250 piezas</option>
+        </select></div>
+      <div class="campo"><label for="f-msg">¿Qué necesitas?</label><textarea id="f-msg" name="Mensaje" placeholder="Cuéntanos con tus palabras qué tienes en mente. Si ya tienes referencias o fecha de lanzamiento, ponlas aquí."></textarea></div>
+
+      <p class="estado" id="form-estado" role="status" aria-live="polite"></p>
+      <button type="submit" class="btn" id="form-enviar">Enviar</button>
+      <p class="nota">Usamos tus datos solo para responderte.</p>
+    </form>
+
+    <p class="otros">¿Prefieres escribir directo? <a href="https://wa.me/523340470112?text=Hola%2C%20quiero%20cotizar%20un%20proyecto%20con%20BrandBOX" rel="noopener">WhatsApp</a> · <a href="mailto:thebrandboxdesign@gmail.com">thebrandboxdesign@gmail.com</a></p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var form = document.getElementById('form-cotizar');
+  var estado = document.getElementById('form-estado'), boton = document.getElementById('form-enviar');
+  function aviso(tipo, html) { estado.className = 'estado ' + tipo; estado.innerHTML = html; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var nombre = form.elements['Nombre'].value.trim(), correo = form.elements['email'].value.trim();
+    if (!nombre || !/^\S+@\S+\.\S+$/.test(correo)) { aviso('err', 'Escribe tu nombre y un correo válido para poder responderte.'); return; }
+    if (form.elements['_honey'].value) return;
+    boton.disabled = true; boton.textContent = 'Enviando…';
+    fetch('https://formsubmit.co/ajax/thebrandboxdesign@gmail.com', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+      .then(function (r) { if (!r.ok) throw new Error('http'); return r.json(); })
+      .then(function () {
+        form.reset();
+        aviso('ok', 'Gracias, ' + nombre.split(' ')[0] + '. Recibimos tu solicitud y te respondemos en un día hábil.');
+        if (window.gtag) gtag('event', 'generate_lead', { method: 'formulario' });
+      })
+      .catch(function () {
+        aviso('err', 'No pudimos enviar el formulario. Escríbenos directo por <a href="https://wa.me/523340470112?text=Hola%2C%20quiero%20cotizar%20un%20proyecto%20con%20BrandBOX" rel="noopener">WhatsApp</a> o a <a href="mailto:thebrandboxdesign@gmail.com">thebrandboxdesign@gmail.com</a>.');
+      })
+      .then(function () { boton.disabled = false; boton.textContent = 'Enviar'; });
+  });
+})();
+</script>
+</body>
+</html>
